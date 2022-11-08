@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 
 const Services = () => {
@@ -20,8 +21,10 @@ const Services = () => {
           <div className='services-section mt-4 mb-4 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
               {
                   services.map(service=> <ServiceCard key={service._id} service={service}></ServiceCard>)
-              }
+        }
+        
       </div>
+      <Link to='/services'><button className="btn btn-outline btn-success">See All</button></Link>
     </div>
   );
 };
