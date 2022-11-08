@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "636a12c0bbf6933cc7729d76",
+    "service_Id": "01",
+    "title": "Enterprise Web Development",
+    "image": "https://i.ibb.co/myFQBJ5/Enterprise-Web-Development.jpg",
+    "price": "100",
+    "description": "Managing an enterprise-level business is no mean task. In the digital-first world, it’s even more challenging to pique your customers’ interest for your B2B or B2C business. All you have is 0.05 seconds to capture users’ attention and form an opinion about your business.That is why you need a brand-forward enterprise web solution. Not only does it support your online presence, but it’s also an important asset for your internal operations. Since enterprise web solutions go beyond the regular CMS-based websites, they will be aligned straight with your business processes and help you run day-to-day tasks smoothly and flexibly.In this post, we’ll shed light on the importance of enterprise web application development and help you answer the nagging question –  ‘Does your enterprise need it?’ Let’s get into it.",
+    "points": [
+      "A Short Primer On Enterprise Website",
+      "A Few Words On Enterprise Web Application",
+      "What Makes Enterprise Software Development Different?",
+      "Difference between Enterprise Website, Web App and Software",
+      "Why Is Enterprise Web Development Important?",
+      "The Importance Of Enterprise Website",
+      "Benefits of an Enterprise Website",
+      " Why You Need Enterprise Web Application",
+      "Benefits of Web Apps for Enterprises",
+      "Undeniable Characteristics for Enterprise Web App Development",
+      "How To Build an Enterprise Web Application",
+      "Summary"
+    ]
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d77",
+    "service_Id": "02",
+    "title": "Digital Platform Development",
+    "image": "https://i.ibb.co/MsBwDMg/Platform-Development.jpg",
+    "price": "250",
+    "description": "The development of a Digital platform has been a popular discussion topic in information technology in recent times. A digital platform not only facilitates exchanges between multiple groups of users, it also serves or enables other digital tools and services. The development of a digital platform involves several phases, with multiple activities taking place in each phase to support the transition from idea conception to platform realisation.The figure (above) highlights some of the key phases in the platform development lifecycle. This is primarily drawn from our experience of working on multiple platform development projects funded by the European Commission’s Framework Programs. These EC projects are typically large-scale collaborative initiatives where multiple teams from research and industry work in tandem to design, develop, validate and deliver innovative solutions that address emerging user needs. The direct involvement of target users, direct involvement of stakeholders in the development activities, fixed budget and time constraints differentiate EC projects from industrial platform development initiatives where the development phases and activities evolve over time based on changes in user behaviours or market factors. In our view, the platform development lifecycle shown above provides ideas, guidelines and reference information for both industrial as well as innovation projects. Of course, each project is bounded by its requirements, methodology, plan etc. and there can be much debate about the merits of individual phases and activities shown in the figure. One thing, however, is certain that having clear ideas and reference information helps in planning and improving the development activities."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d78",
+    "service_Id": "03",
+    "title": "Web Portal Development.",
+    "image": "https://i.ibb.co/q58H8GX/Web-Portal.png",
+    "price": "700",
+    "description": "Web portal development transforms digitally the way organizations interact with their customers, business partners, and employees. A company may use web portals to enable self-service functions for target users and give access to services, products, information, and communication tools. A web portal is a secure web-based platform that gives access to varied functionality and content via an easy-to-navigate interface. An established web portal development company, WebLogic can help you create a web portal of any type to cover your specific needs in engaging with the audience, be it your customers, partners, or employees."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d79",
+    "service_Id": "04",
+    "title": "MIS Development",
+    "image": "https://i.ibb.co/NFp9kd1/MIS-system.webp",
+    "price": "1000",
+    "description": "The software is one of the major components of a management information system. Some of the software used in a MIS system is off the shelf. These include packages such as spreadsheet programs, database applications, etc.However, they are times when off the shelf, software does not meet the business requirements. The solution to this problem is custom made software."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d80",
+    "service_Id": "05",
+    "title": "Website Development",
+    "image": "https://i.ibb.co/jzs8z1X/Web-Devlopment.jpg",
+    "price": "150",
+    "description": "Web development is the work involved in developing a website for the Internet (World Wide Web) or an intranet (a private network).[1] Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services. A more comprehensive list of tasks to which Web development commonly refers, may include Web engineering, Web design, Web content development, client liaison, client-side/server-side scripting, Web server and network security configuration, and e-commerce development. Among Web professionals, Web development usually refers to the main non-design aspects of building Web siteswriting markup and coding. Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.For larger organizations and businesses, Web development teams can consist of hundreds of people (Web developers) and follow standard methods like Agile methodologies while developing Web sites. Smaller organizations may only require a single permanent or contracting developer, or secondary assignment to related job positions such as a graphic designer or information systems technician. Web development may be a collaborative effort between departments rather than the domain of a designated department. There are three kinds of Web developer specialization: front-end developer, back-end developer, and full-stack developer.[3] Front-end developers are responsible for behavior and visuals that run in the user browser, while back-end developers deal with the servers. Since the commercialization of the Web with Tim Berners-Lee[4] developing the World Wide Web at CERN, the industry has boomed and has become one of the most used technologies ever."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d81",
+    "service_Id": "06",
+    "title": "Mobile Back-end Development.",
+    "image": "https://i.ibb.co/RTQw5XZ/Mobile-Backend.jpg",
+    "price": "450",
+    "description": "Mobile backend as a service (MBaaS), also known as backend as a service, is a model for providing web app and mobile app developers with a way to link their applications to backend cloud storage and APIs exposed by back end applications while also providing features such as user management, push notifications, and integration with social networking services.[4] These services are provided via the use of custom software development kits (SDKs) and application programming interfaces (APIs). BaaS is a relatively recent development in cloud computing, with most BaaS startups dating from 2011 or later.Web and mobile apps require a similar set of features on the backend, including notification service, integration with social networks, and cloud storage. Each of these services has its own API that must be individually incorporated into an app, a process that can be time-consuming and complicated for app developers. BaaS providers form a bridge between the frontend of an application and various cloud-based backends via a unified API and SDK.Providing a consistent way to manage backend data means that developers do not need to redevelop their own backend for each of the services that their apps need to access, potentially saving both time and money.Although similar to other cloud-computing business models, such as software as a service (SaaS), infrastructure as a service (IaaS), and platform as a service (PaaS), BaaS is distinct from these other services in that it specifically addresses the cloud-computing needs of web and mobile app developers by providing a unified means of connecting their apps to cloud services."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d782",
+    "service_Id": "07",
+    "title": "Custom LMS Development.",
+    "image": "https://i.ibb.co/9w6L8Fs/Online-e-Learning-Solutions-For-LMS-Development.webp",
+    "price": "800",
+    "description": "A learning management system (LMS) is a software application for the administration, documentation, tracking, reporting, automation, and delivery of educational courses, training programs, materials or learning and development programs. The learning management system concept emerged directly from e-Learning. Learning management systems make up the largest segment of the learning system market. The first introduction of the LMS was in the late 1990s. Learning management systems have faced a massive growth in usage due to the emphasis on remote learning during the COVID-19 pandemic.Learning management systems were designed to identify training and learning gaps, using analytical data and reporting. LMSs are focused on online learning delivery but support a range of uses, acting as a platform for online content, including courses, both asynchronous based and synchronous based. In the higher education space, an LMS may offer classroom management for instructor-led training or a flipped classroom.[4] Modern LMSs include intelligent algorithms to make automated recommendations for courses based on a user's skill profile as well as extract metadata from learning materials to make such recommendations even more accurate."
+  },
+  {
+    "_id": "636a12c0bbf6933cc7729d83",
+    "service_Id": "08",
+    "title": "Custom Plugin Development.",
+    "image": "https://i.ibb.co/ByB6sHZ/Word-Press.jpg",
+    "price": "350",
+    "description": "WordPress (WP or WordPress.org) is a free and open-source content management system (CMS) written in hypertext preprocessor language[4] and paired with a MySQL or MariaDB database with supported HTTPS. Features include a plugin architecture and a template system, referred to within WordPress as 'Themes'. WordPress was originally created as a blog-publishing system but has evolved to support other web content types including more traditional mailing lists and Internet fora, media galleries, membership sites, learning management systems (LMS) and online stores. One of the most popular content management system solutions in use, WordPress is used by 42.8% of the top 10 million websites as of October 2021.WordPress was released on May 27, 2003, by its founders, American developer Matt Mullenweg[1] and English developer Mike Little,[7][8] as a fork of b2/cafelog. The software is released under the GPLv2 (or later) license.To function, WordPress has to be installed on a web server, either part of an Internet hosting service like WordPress.com or a computer running the software package WordPress.org in order to serve as a network host in its own right.[10] A local computer may be used for single-user testing and learning purposes."
+  }
+]

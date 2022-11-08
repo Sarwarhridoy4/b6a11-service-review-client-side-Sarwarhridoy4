@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import Blogs from "../../Pages/Blogs/Blogs";
 import Home from "../../Pages/Home/Home/Home";
 import Services from "../../Pages/Services/Services";
+import ServiceDetailse from "../../Pages/Shared/ServiceDetailse/ServiceDetailse";
 
 // Router Setup
 const router = createBrowserRouter([
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/login",
+        element: <Blogs></Blogs>,
+      },
+      {
+        path: "/service/:id",
+        element: <ServiceDetailse></ServiceDetailse>
       },
     ],
   },
