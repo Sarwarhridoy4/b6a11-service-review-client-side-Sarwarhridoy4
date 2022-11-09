@@ -22,7 +22,7 @@ const Error = () => {
               But dont worry, you can find plenty of other things on our
               homepage.
             </p>
-            <Link>
+            <Link to='/'>
               <button className='btn btn-outline btn-warning'>Back Home</button>
             </Link>
           </div>
