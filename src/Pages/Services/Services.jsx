@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 
 const Services = () => {
@@ -24,7 +23,7 @@ const Services = () => {
         }
         
       </div>
-      <Link to='/services'><button className="btn btn-outline btn-success">See All</button></Link>
+      
     </div>
   );
 };

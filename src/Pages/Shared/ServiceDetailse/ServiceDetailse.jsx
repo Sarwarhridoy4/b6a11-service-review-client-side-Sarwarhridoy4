@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const ServiceDetailse = () => {
   const ServiceDetail = useLoaderData();
   console.log(ServiceDetail);
-  const { _id, title, image, description, price } = ServiceDetail;
+  const { title, image, description, price } = ServiceDetail;
   return (
     <div>
       <div className='mockup-window border bg-sky-300 m-20'>
