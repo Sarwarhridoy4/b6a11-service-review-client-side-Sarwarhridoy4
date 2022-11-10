@@ -5,15 +5,14 @@ const AddServices = () => {
   // Add service event handler
   const handelAddService = (event) => {
     event.preventDefault();
-      console.log(service);
-      
+    console.log(service);
 
-    fetch("http://localhost:5000/services/", {
+    fetch("https://web-logic-by-sarwar-server-side.vercel.appservices/", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(service)
+      body: JSON.stringify(service),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
@@ -24,8 +23,8 @@ const AddServices = () => {
     const value = event.target.value;
     const newService = { ...service };
     newService[field] = value;
-      setService(newService);
-      event.target.reset()
+    setService(newService);
+    event.target.reset();
   };
   return (
     <div className='min-h-screen'>
