@@ -4,7 +4,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { _id, title, image, price, description } = service;
+  const { _id, title, image, price, description,service_Id } = service;
   console.log(_id);
   return (
     <div>
@@ -22,7 +22,8 @@ const ServiceCard = ({ service }) => {
         <div className='card-body'>
           <h2 className='card-title'>{title}</h2>
                   <p>{description.slice(0, 100) +'...'}</p>
-                  <h3 className="text-sky-600 font-semibold">$ {price}</h3>
+          <h3 className="text-sky-600 font-semibold">$ {price}</h3>
+          <span>SERVICE ID: {service_Id}</span>
           <div className='card-actions justify-end'>
             <Link to={`/services/${_id}`}><button className='btn btn-primary'>Show Detailse</button></Link>
             
