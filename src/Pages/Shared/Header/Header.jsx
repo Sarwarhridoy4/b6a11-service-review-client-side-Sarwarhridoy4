@@ -2,11 +2,21 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../contexts/Auth/AuthProvider";
+import { FaSignOutAlt } from 'react-icons/fa';
+
 
 const Header = () => {
   const { user,LogOut} = useContext(AuthContext);
   const handelLogOut = () => {
-    LogOut()
+    const confirm = window.confirm('Really Want to Logout?')
+    if (confirm) {
+      window.alert('Log Out Successful')
+      return LogOut()
+    }
+    
+    if (!confirm) {
+      return window.alert('Operation Interupted!')
+    }
   }
   return (
     <div>
@@ -60,7 +70,9 @@ const Header = () => {
           <img className="rounded-full w-10" src={user?.photoURL} alt="" />
         </div>
         {
-                user?<button onClick={handelLogOut} className="btn btn-outline btn-primary">Logout</button>:null
+          user ? <button onClick={handelLogOut} className="btn btn-outline btn-primary w-14 rounded-full">
+            <FaSignOutAlt></FaSignOutAlt>
+                </button>:null
               }
       </div>
     </div>
