@@ -16,12 +16,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
-        loader: ()=>fetch(`http://localhost:5000/services/home`),
-        element: <Home></Home>
+        loader: () =>
+          fetch(
+            `https://web-logic-by-sarwar-server-side.vercel.app/services/home`
+          ),
+        element: <Home></Home>,
       },
       {
         path: "/services",
@@ -33,11 +36,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-service",
-        element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <AddServices></AddServices>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-reviews",
-        element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+        element: (
+          <PrivateRoute>
+            <MyReview></MyReview>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -45,12 +56,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/signup",
-        element: <SignUp></SignUp>
+        element: <SignUp></SignUp>,
       },
       {
         path: "/services/:id",
-        loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`),
-        element: <ServiceDetailse></ServiceDetailse>
+        loader: ({ params }) =>
+          fetch(
+            `https://web-logic-by-sarwar-server-side.vercel.app/services/${params.id}`
+          ),
+        element: <ServiceDetailse></ServiceDetailse>,
       },
     ],
   },
