@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div>
-      <div className=' min-h-screen bg-gradient-to-r from-sky-500 to-indigo-500'>
+      <div className=' min-h-16 bg-gradient-to-r from-sky-500 to-indigo-500'>
         <div className='hero-content flex-col lg:flex-row'>
           <div className="img w-1/2">
           <img
