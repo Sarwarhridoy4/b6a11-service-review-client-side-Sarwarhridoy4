@@ -12,40 +12,67 @@ const SignUp = () => {
           </div>
           <p>Have an Account Already?<Link to='/login'>Sign In Now</Link></p>
           <div className='card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100'>
-            <div className='card-body'>
+            <form className='card-body'>
+              {/* name */}
+              <div className='form-control'>
+                <label className='label'>
+                  <span className='label-text'>Your Name</span>
+                </label>
+                <input
+                  type='text'
+                  placeholder='Name'
+                  name='name'
+                  required
+                  className='input input-bordered'
+                />
+              </div>
+              {/* Email */}
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Email</span>
                 </label>
                 <input
-                  type='text'
+                  type='email'
                   placeholder='email'
+                  name='email'
+                  required
                   className='input input-bordered'
                 />
               </div>
+              {/* password */}
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Password</span>
                 </label>
                 <input
-                  type='text'
+                  type='password'
                   placeholder='password'
+                  name='password'
+                  required
                   className='input input-bordered'
                 />
+              </div>
+              {/* Image URL */}
+              <div className='form-control'>
                 <label className='label'>
-                  <a href='/' className='label-text-alt link link-hover'>
-                    Forgot password?
-                  </a>
+                  <span className='label-text'>ImageURL</span>
                 </label>
+                <input
+                  type='text'
+                  placeholder='Image URL here'
+                  name='ImageURL'
+                  required
+                  className='input input-bordered'
+                />
               </div>
               <div className='form-control mt-6'>
-                <button className='btn btn-primary'>Login</button>
+                <button className='btn btn-primary'>SignUP</button>
                 <button className='btn btn-primary mt-4'>
                <FcGoogle style={{'width':'30px'}}></FcGoogle>
-                  Login</button>
+                  SignUp</button>
                 
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

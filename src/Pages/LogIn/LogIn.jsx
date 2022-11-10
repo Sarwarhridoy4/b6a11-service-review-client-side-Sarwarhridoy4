@@ -13,14 +13,16 @@ const LogIn = () => {
           </div>
           <p>New Here?<Link to='/signup'>Register Now</Link></p>
           <div className='card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100'>
-            <div className='card-body'>
+            <form className='card-body'>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Email</span>
                 </label>
                 <input
-                  type='text'
+                  type='email'
                   placeholder='email'
+                  name="email"
+                  required
                   className='input input-bordered'
                 />
               </div>
@@ -29,8 +31,10 @@ const LogIn = () => {
                   <span className='label-text'>Password</span>
                 </label>
                 <input
-                  type='text'
+                  type='password'
                   placeholder='password'
+                  name="password"
+                  required
                   className='input input-bordered'
                 />
                 <label className='label'>
@@ -46,7 +50,7 @@ const LogIn = () => {
                   Login</button>
                 
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
