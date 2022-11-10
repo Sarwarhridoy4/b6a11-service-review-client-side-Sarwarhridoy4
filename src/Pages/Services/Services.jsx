@@ -6,7 +6,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://web-logic-by-sarwar-server-side.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -17,13 +17,11 @@ const Services = () => {
         I've serval year of experiense in Development Field with that, I served
         around <br /> 400+ satisfied Clients.
       </p>
-          <div className='services-section mt-4 mb-4 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-              {
-                  services.map(service=> <ServiceCard key={service._id} service={service}></ServiceCard>)
-        }
-        
+      <div className='services-section mt-4 mb-4 grid gap-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        {services.map((service) => (
+          <ServiceCard key={service._id} service={service}></ServiceCard>
+        ))}
       </div>
-      
     </div>
   );
 };
