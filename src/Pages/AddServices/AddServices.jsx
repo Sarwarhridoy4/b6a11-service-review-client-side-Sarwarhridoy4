@@ -7,7 +7,7 @@ const AddServices = () => {
     event.preventDefault();
     console.log(service);
 
-    fetch("https://web-logic-by-sarwar-server-side.vercel.appservices/", {
+    fetch("https://web-logic-by-sarwar-server-side.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -24,7 +24,6 @@ const AddServices = () => {
     const newService = { ...service };
     newService[field] = value;
     setService(newService);
-    event.target.reset();
   };
   return (
     <div className='min-h-screen'>
