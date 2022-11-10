@@ -40,7 +40,10 @@ const Header = () => {
                 <NavLink to='/services'>Services</NavLink>
               </li>
               <li>
-                <NavLink to='/blogs'>Read Blogs</NavLink>
+                <NavLink to='/add-service'>Add A Service</NavLink>
+              </li>
+              <li>
+                <NavLink to='/my-reviews'>My Reviews</NavLink>
               </li>
               <li>
                 <NavLink to='/login'>LogIn/SignUp</NavLink>

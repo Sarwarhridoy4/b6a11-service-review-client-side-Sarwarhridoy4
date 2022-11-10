@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="services grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="services grid grid-cols-1 gap-5 m-5 md:grid-cols-2 lg:grid-cols-3">
       {
         service.map(service=><HomeCard key={service._id} service ={service}></HomeCard>)
       }
