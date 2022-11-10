@@ -2,7 +2,7 @@ import React from 'react';
 
 const AddServices = () => {
     return (
-        <div>
+        <div className='min-h-screen'>
             <p>Add Service Component From here</p>
         </div>
     );

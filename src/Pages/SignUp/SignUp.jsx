@@ -1,13 +1,14 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/Auth/AuthProvider";
 
 const SignUp = () => {
   const { createUser, googleSignIn } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider()
   // console.log(createUser);
+  const navigate = useNavigate()
   const handelSignup = (event) => {
     event.preventDefault();
 
@@ -26,6 +27,7 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate('/')
       })
       .catch((error) => {
         console.error(error);
@@ -38,6 +40,7 @@ const SignUp = () => {
       .then(result => {
         const user = result.user;
         console.log(user);
+        navigate('/')
       })
       .catch(error => {
       console.error(error);
