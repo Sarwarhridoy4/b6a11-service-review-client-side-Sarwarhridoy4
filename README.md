@@ -6,7 +6,7 @@ Hello visitors, I am a self Learning developer. I'm working individually. Provid
 
 # Hi, I'm Sarwar! 👋
 
-I am a student and a full stack developer. You can check out my work in my public repository.
+I am a student and a full-stack developer. You can check out my work in my public repository.
 
 ## 🔗 Links
 
@@ -16,9 +16,9 @@ I am a student and a full stack developer. You can check out my work in my publi
 
 ## 🛠 Skills
 
-Javascript, HTML, CSS,React,MongoBD etc...
+Javascript, HTML, CSS, React, MongoDB, etc...
 
-## Resources I Used Herre
+## Resources I Used Here
 
 [Daisyui](https://daisyui.com/)
 [leaflet](https://react-leaflet.js.org/)
