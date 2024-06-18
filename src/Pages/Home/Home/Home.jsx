@@ -8,7 +8,7 @@ import HomeCard from "../../ServiceCard/HomeCard";
 
 const Home = () => {
   const service = useLoaderData()
-  console.log(service);
+  // console.log(service);
   return (
     <div>
       <Banner></Banner>
