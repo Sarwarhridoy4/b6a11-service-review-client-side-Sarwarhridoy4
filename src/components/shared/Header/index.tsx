@@ -4,12 +4,15 @@ import { FaSignOutAlt } from "react-icons/fa";
 import { AuthContext } from "../../../contexts/auth/AuthProvider";
 
 const Header: React.FC = () => {
-  const { user, LogOut } = useContext(AuthContext);
+  const { user, LogOut } = useContext(AuthContext) ?? {
+    user: null,
+    LogOut: () => {},
+  }; // Fallback if context is null
   const navigate = useNavigate();
 
   const handelLogOut = (): void => {
-    const confirm = window.confirm("Really Want to Logout?");
-    if (confirm) {
+    const confirmLogout = window.confirm("Really Want to Logout?");
+    if (confirmLogout) {
       window.alert("Log Out Successful");
       LogOut();
       navigate("/");
@@ -48,6 +51,9 @@ const Header: React.FC = () => {
               </li>
               <li>
                 <NavLink to='/services'>Services</NavLink>
+              </li>
+              <li>
+                <NavLink to='/blogs'>Blogs</NavLink>
               </li>
               <li>
                 <NavLink to='/add-service'>Add A Service</NavLink>

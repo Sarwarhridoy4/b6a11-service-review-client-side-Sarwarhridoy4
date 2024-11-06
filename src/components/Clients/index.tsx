@@ -1,4 +1,6 @@
-const Clients = () => {
+import React from "react";
+
+const Clients: React.FC = () => {
   return (
     <div>
       <div className='text my-8'>
@@ -9,29 +11,28 @@ const Clients = () => {
           <img
             className='w-36'
             src='https://www.clipartmax.com/png/middle/288-2889200_microsoft-logo-microsoft-logo-icon-logo-database-microsoft-logo-transparent.png'
-            alt=''
+            alt='Microsoft Logo'
           />
         </div>
         <div className='client w-30'>
           <img
             className='w-36'
             src='https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1'
-            alt=''
+            alt='Client Logo 2'
           />
         </div>
         <div className='client w-30'>
           <img
             className='w-36'
             src='https://www.citypng.com/public/uploads/preview/-11596400062gnenanbkbq.png'
-            alt=''
+            alt='Client Logo 3'
           />
         </div>
-
         <div className='client w-30'>
           <img
             className='w-36'
             src='https://i.pinimg.com/736x/3e/f4/ac/3ef4ac8fd8e4459ab2c03ac01cda518a.jpg'
-            alt=''
+            alt='Client Logo 4'
           />
         </div>
       </div>

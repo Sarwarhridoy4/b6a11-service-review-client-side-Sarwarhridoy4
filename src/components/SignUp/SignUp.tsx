@@ -1,51 +1,58 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../contexts/Auth/AuthProvider";
+import { AuthContext } from "../../contexts/auth/AuthProvider";
 
-const SignUp = () => {
-  const { createUser, googleSignIn } = useContext(AuthContext);
-  const googleProvider = new GoogleAuthProvider()
-  // console.log(createUser);
-  const navigate = useNavigate()
-  const handelSignup = (event) => {
+
+const SignUp: React.FC = () => {
+  const { createUser, googleSignIn }:any = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+
+  const handelSignup = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     // Form Data Collection
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const password = form.password.value;
-    const ImageURL = form.ImageURL.value;
-    //checking data
+    const form = event.currentTarget;
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const password = (form.elements.namedItem("password") as HTMLInputElement)
+      .value;
+    const ImageURL = (form.elements.namedItem("ImageURL") as HTMLInputElement)
+      .value;
+
     console.log(name, email, password, ImageURL);
-    //reset form
-    event.target.reset();
-    //creating user
+
+    // Reset form
+    form.reset();
+
+    // Creating user
     createUser(email, password)
-      .then((result) => {
+      .then((result: any) => {
         const user = result.user;
         console.log(user);
-        navigate('/')
+        navigate("/");
       })
-      .catch((error) => {
+      .catch((error: Error) => {
         console.error(error);
       });
   };
 
-  //google signin
+  // Google sign-in
   const handelGoogleSignIn = () => {
     googleSignIn(googleProvider)
-      .then(result => {
+      .then((result: any) => {
         const user = result.user;
         console.log(user);
-        navigate('/')
+        navigate("/");
       })
-      .catch(error => {
-      console.error(error);
-    })
-  }
+      .catch((error: Error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
       <div className='hero min-h-screen bg-base-200'>
@@ -54,11 +61,11 @@ const SignUp = () => {
             <h1 className='text-5xl font-bold text-center'>Signup Here</h1>
           </div>
           <p>
-            Have an Account Already?<Link to='/login'>Sign In Now</Link>
+            Have an Account Already? <Link to='/login'>Sign In Now</Link>
           </p>
           <div className='card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100'>
             <form onSubmit={handelSignup} className='card-body'>
-              {/* name */}
+              {/* Name */}
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Your Name</span>
@@ -84,7 +91,7 @@ const SignUp = () => {
                   className='input input-bordered'
                 />
               </div>
-              {/* password */}
+              {/* Password */}
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Password</span>
@@ -111,11 +118,16 @@ const SignUp = () => {
                 />
               </div>
               <div className='form-control mt-6'>
-                <button className='btn btn-primary'>SignUP</button>
+                <button type='submit' className='btn btn-primary'>
+                  Sign Up
+                </button>
               </div>
-              <button onClick={handelGoogleSignIn} className='btn btn-primary mt-4'>
-                <FcGoogle style={{ width: "30px" }}></FcGoogle>
-                SignUp
+              <button
+                onClick={handelGoogleSignIn}
+                className='btn btn-primary mt-4'
+              >
+                <FcGoogle style={{ width: "30px" }} />
+                Sign Up with Google
               </button>
             </form>
           </div>

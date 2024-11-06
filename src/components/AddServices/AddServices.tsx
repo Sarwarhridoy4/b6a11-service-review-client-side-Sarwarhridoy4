@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
-const AddServices = () => {
-  const [service, setService] = useState({});
+interface Service {
+  title?: string;
+  service_Id?: string;
+  image?: string;
+  description?: string;
+  price?: string;
+}
+
+const AddServices: React.FC = () => {
+  const [service, setService] = useState<Service>({});
+
   // Add service event handler
-  const handelAddService = (event) => {
+  const handleAddService = (event: FormEvent) => {
     event.preventDefault();
     console.log(service);
 
     fetch("https://web-logic-by-sarwar-server-side.vercel.app/services", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(service),
     })
@@ -18,13 +27,13 @@ const AddServices = () => {
       .then((data) => console.log(data));
   };
 
-  const handelInputBlur = (event) => {
-    const field = event.target.name;
-    const value = event.target.value;
-    const newService = { ...service };
-    newService[field] = value;
-    setService(newService);
+  const handleInputBlur = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setService((prevService) => ({ ...prevService, [name]: value }));
   };
+
   return (
     <div className='min-h-screen'>
       <div className='hero min-h-screen bg-base-200'>
@@ -32,17 +41,17 @@ const AddServices = () => {
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold'>Feel Free To Add A Service</h1>
             <p className='py-6'>
-              I always Appreciate to suggest me start providing new services
+              I always appreciate suggestions for new services.
             </p>
           </div>
           <div className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
-            <form className='card-body'>
+            <form className='card-body' onSubmit={handleAddService}>
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Service Name</span>
                 </label>
                 <input
-                  onBlur={handelInputBlur}
+                  onBlur={handleInputBlur}
                   type='text'
                   name='title'
                   placeholder='Service Name'
@@ -55,10 +64,10 @@ const AddServices = () => {
                   <span className='label-text'>Service ID</span>
                 </label>
                 <input
-                  onBlur={handelInputBlur}
+                  onBlur={handleInputBlur}
                   type='text'
                   name='service_Id'
-                  placeholder='service id eg- 01'
+                  placeholder='Service ID (e.g., 01)'
                   className='input input-bordered'
                   required
                 />
@@ -68,10 +77,10 @@ const AddServices = () => {
                   <span className='label-text'>Image for Service</span>
                 </label>
                 <input
-                  onBlur={handelInputBlur}
+                  onBlur={handleInputBlur}
                   type='text'
                   name='image'
-                  placeholder='image link'
+                  placeholder='Image URL'
                   className='input input-bordered'
                   required
                 />
@@ -81,34 +90,28 @@ const AddServices = () => {
                   <span className='label-text'>Details Here</span>
                 </label>
                 <textarea
-                  onBlur={handelInputBlur}
-                  type='text'
+                  onBlur={handleInputBlur}
                   name='description'
-                  placeholder='service-detail'
+                  placeholder='Service Details'
                   className='input input-bordered h-24'
                   required
                 />
               </div>
-
               <div className='form-control'>
                 <label className='label'>
                   <span className='label-text'>Offerable Price</span>
                 </label>
                 <input
-                  onBlur={handelInputBlur}
+                  onBlur={handleInputBlur}
                   type='text'
                   name='price'
-                  placeholder='Price Suggested'
+                  placeholder='Suggested Price'
                   className='input input-bordered'
                   required
                 />
               </div>
               <div className='form-control mt-6'>
-                <button
-                  onClick={handelAddService}
-                  type='Submit'
-                  className='btn btn-primary'
-                >
+                <button type='submit' className='btn btn-primary'>
                   Submit
                 </button>
               </div>

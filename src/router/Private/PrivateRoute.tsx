@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import React, { useContext, ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { AuthContext } from "../../contexts/auth/AuthProvider.tsx";
-import Spinner from "../../components/Spinner/Spinner.tsx";
+import { AuthContext } from "../../contexts/auth/AuthProvider";
+import Spinner from "../../components/Spinner/Spinner";
 
-const PrivateRoute = ({ children }) => {
-  const { user, loading } = useContext(AuthContext);
+interface PrivateRouteProps {
+  children: ReactNode;
+}
+
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+  const { user, loading } = useContext(AuthContext)!;
   const location = useLocation();
 
   if (loading) {
@@ -12,7 +16,7 @@ const PrivateRoute = ({ children }) => {
   }
 
   if (user && user.uid) {
-    return children;
+    return <>{children}</>;
   }
 
   // Redirect to login, but save the intended destination in the state

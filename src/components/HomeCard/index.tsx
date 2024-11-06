@@ -1,9 +1,29 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
 
-const HomeCard = ({ service }) => {
-  const { _id, image, title, description, price } = service;
+// Define a type for the service prop
+interface Service {
+  _id: string;
+  image: string;
+  title: string;
+  description: string;
+  price: number;
+}
+
+interface HomeCardProps {
+  service: Service;
+}
+
+const HomeCard: React.FC<HomeCardProps> = ({ service }) => {
+  const {
+    _id,
+    image = "",
+    title = "No Title",
+    description = "No description available",
+    price = 0,
+  } = service;
   const shortDes = description.slice(0, 100);
+
   return (
     <div>
       <div className='card w-72 md:w96 h-96 glass'>
@@ -17,7 +37,11 @@ const HomeCard = ({ service }) => {
         >
           <figure>
             <PhotoView src={image}>
-              <img src={image} style={{ objectFit: "cover" }} alt='' />
+              <img
+                src={image || "default-image.jpg"}
+                style={{ objectFit: "cover" }}
+                alt={title}
+              />
             </PhotoView>
           </figure>
         </PhotoProvider>
@@ -27,7 +51,7 @@ const HomeCard = ({ service }) => {
           <h3 className='text-sky-600 font-semibold'>$ {price}</h3>
           <div className='card-actions justify-end'>
             <Link to={`/services/${_id}`}>
-              <button className='btn btn-primary'>Show Detailse</button>
+              <button className='btn btn-primary'>Show Details</button>
             </Link>
           </div>
         </div>

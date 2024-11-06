@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useEffect, useState, ReactNode } from "react";
 import {
-  AuthProvider as FirebaseAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
@@ -28,6 +27,11 @@ const auth = getAuth(app);
 
 interface AuthProviderProps {
   children: ReactNode;
+}
+
+interface AuthContextProps {
+  user: User | null; // The user is either a User object or null
+  LogOut: () => void;
 }
 
 const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
