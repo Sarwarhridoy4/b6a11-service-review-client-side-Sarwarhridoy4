@@ -2,12 +2,11 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/auth/AuthProvider";
 
-
 const SignUp: React.FC = () => {
-  const { createUser, googleSignIn }:any = useContext(AuthContext);
+  const { createUser, googleSignIn }: any = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const navigate = useNavigate();
 

@@ -1,5 +1,5 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 // Define a type for the service prop
 interface Service {

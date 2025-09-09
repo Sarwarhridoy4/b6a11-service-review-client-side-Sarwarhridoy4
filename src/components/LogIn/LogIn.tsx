@@ -2,7 +2,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/auth/AuthProvider";
 
 const LogIn: React.FC = () => {
@@ -34,11 +34,11 @@ const LogIn: React.FC = () => {
   const handelGoogleSignIn = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     googleSignIn(googleProvider)
-      .then((result:any) => {
+      .then((result: any) => {
         const user = result.user;
         navigate(from, { replace: true });
       })
-      .catch((error:any) => {
+      .catch((error: any) => {
         console.error(error);
       });
   };

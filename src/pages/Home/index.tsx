@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router";
 import Banner from "../../components/Banner";
 import HomeCard from "../../components/HomeCard";
 import Clients from "../../components/Clients";
@@ -8,7 +8,6 @@ import Locate from "../../components/Locate";
 interface Service {
   _id: string;
 }
-
 
 const Home: React.FC = () => {
   const service = useLoaderData() as Service[];

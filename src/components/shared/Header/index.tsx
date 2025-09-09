@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router";
 import { FaSignOutAlt } from "react-icons/fa";
 import { AuthContext } from "../../../contexts/auth/AuthProvider";
 

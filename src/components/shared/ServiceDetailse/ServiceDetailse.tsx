@@ -1,5 +1,5 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router";
 import "react-photo-view/dist/react-photo-view.css";
 
 interface ServiceDetails {
